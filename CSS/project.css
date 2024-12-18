@@ -1,0 +1,497 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'comic sans ms';
+
+}
+
+/*ajustment bacgorund body*/
+body {
+    background-image: linear-gradient(rgba(88, 118, 161, 0.808),rgba(17, 44, 95, 0.8)),url(../source/back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+/*ajustment image*/
+.-backimage {
+    min-height: 100vh;
+    width: auto;
+    background-image: linear-gradient(rgba(129, 157, 180, 0.329),rgba(0, 14, 61, 0.904)),url(../source/ricardo-contarini-menu-janna.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.logo {
+    display: flex; /* Mengatur elemen dalam .logo secara horizontal */
+    align-items: center; /* Menyelaraskan teks di tengah logo */
+    gap: 10px; /* Jarak antara logo dan teks */
+    
+}
+
+.logo img {
+    height: 75px; /* Tinggi logo */
+    width: 75px;  /* Lebar logo */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar sesuai lingkaran */
+    border: 2px solid  #ffffff; /* Border putih opsional */
+}
+
+.logo-text {
+    font-size: 34px; /* Ukuran teks */
+    font-weight: bold; /* Ketebalan teks */
+    color: white; /* Warna teks */
+    line-height: 0.9; /* Menghilangkan jarak vertikal tambahan */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 4%;
+    align-items: center;
+    border-bottom: 1px solid  #ffffff;
+    background-color: rgba(0, 0, 0, 0.37);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 93%;
+     
+    
+}
+
+.menu {
+    flex: 1;
+    text-align: right;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 12px;
+    position: relative;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.menu ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #7f8fec;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+
+}
+
+.menu ul li:hover::after {
+    width: 100%;
+}
+
+ 
+.text-tile  {
+    text-align: center;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.966);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    font-size: 44px;
+}
+
+.scroll{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 175px;
+    font-size: 24px;
+    align-items: center;
+}
+/* Main section: Mengatur elemen kolom kiri dan kanan secara horizontal */
+.main-section {
+    display: flex; /* Mengatur layout flexbox */
+    justify-content: space-between; /* Beri jarak antara kolom kiri dan kanan */
+    align-items: flex-start; /* Rata atas */
+    padding: 20px; /* Ruang di sekitar konten */
+    gap: 50px; /* Jarak antara kolom */
+}
+
+/* Kolom kiri */
+.left-column {
+    flex: 2; /* Lebih lebar dibandingkan kolom kanan */
+    display: flex;
+    flex-direction: column; /* Susun konten secara vertikal */
+    gap: 30px; /* Jarak antar elemen di kolom kiri */
+}
+
+/* Kolom kanan */
+.right-column {
+    flex: 1.3; /* Lebar kolom lebih kecil */
+   
+}
+
+/* Styling untuk gambar dan teks utama */
+.imageslide {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.imageslide img {
+    max-width: 85%;
+    height: auto;
+    margin: 25px;
+    border-radius: 10px; /* Opsional: Tambahkan radius untuk membuat gambar lebih rapi */
+}
+
+.imageslide p {
+    font-size: 18px;
+    color: #ffffff; /* Warna teks */
+    margin: 15px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling untuk provider */
+.provider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Jarak antara gambar dan teks */
+}
+
+.provider img {
+    height: 75px;
+    width: 75px;
+    border-radius: 25%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover;
+    border: 2px solid rgb(176, 194, 202); /* Border putih opsional */
+    
+}
+
+.provider .txt h1 {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+}
+
+.provider .txt p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Styling untuk fitur (angka dan teks) */
+.prov {
+    display: flex;
+    flex-direction: column; /* Susun fitur secara vertikal */
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Rata vertikal antara angka dan teks */
+    gap: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.212);
+}
+
+/* Form container */
+/* Container untuk seluruh form */
+.form-container {
+    max-width: 400px; /* Lebar maksimal form */
+    margin: 50px auto; /* Menempatkan form di tengah layar */
+    padding: 50px; /* Ruang dalam untuk border */
+    border: 1px solid #ffffff; /* Warna border */
+    border-radius: 10px; /* Membuat border melengkung */
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.212);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* Header Contact Us */
+.for {
+    text-align: center; /* Header di tengah */
+    margin-bottom: 20px;
+}
+
+.for h2 {
+    color: #ffffff; /* Warna teks header */
+}
+
+.for p {
+    font-size: 14px;
+    color: #ffffff; /* Warna teks deskripsi */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar elemen form */
+}
+
+form label {
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input:focus {
+    border-color: #007BFF; /* Warna border saat fokus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol Send */
+form button {
+    padding: 10px 20px;
+    background-color: #7f8fec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+form button:hover {
+    background-color:#394068;
+}
+
+.form-container span {
+    color: red;
+    font-size: 14px;
+}
+
+.midle{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   font-size: 34px;
+   padding-top: 75px; /* Jarak antara teks dan garis atas */
+   padding-bottom: 75px; /* Jarak antara teks dan garis bawah */
+   border-top: 1px solid  #ffffff;
+   border-bottom: 1px solid  #ffffff;
+   margin-top: 100px; /* Jarak di luar garis atas */
+   margin-bottom: 100px; /* Jarak di luar garis bawah */
+   color: white;
+   background-color: rgba(0, 0, 0, 0.212);
+}
+
+/* Mengatur kontainer utama */
+.other {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    grid-gap: 200px; /* Jarak antar elemen */
+    justify-items: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+    margin: 100px auto; /* Memberikan margin di atas dan bawah, serta memusatkan kontainer */
+    max-width: 1200px; /* Maksimal lebar kontainer */
+}
+
+/* Setiap sesi */
+.sesi {
+    text-align: center; /* Memusatkan teks */
+    padding: 54px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border tipis untuk estetika */
+    border-radius: 10px; /* Membuat sudut elemen melengkung */
+    background-color: rgba(0, 0, 0, 0.212);/* Warna latar belakang */
+    width: 100%; /* Lebar elemen */
+    max-width: 250px; /* Lebar maksimal untuk elemen */
+    transition: transform 0.3s ease;
+}
+
+.sesi:hover {
+    transform: scale(1.2); /* Efek hover membesar */
+}
+
+/* Background berbeda untuk setiap sesi */
+.china {
+    background:url(../source/china.jpg) center;
+    background-blend-mode: overlay;
+}
+.japan {
+    background:url(../source/kyoto.jpg) center;
+    background-blend-mode: overlay;
+}
+.singapore {
+    background:url(../source/singapore.jpg) center;
+    background-blend-mode: overlay;
+}
+.finlandia {
+    background: url(../source/findland.jpg) center ;
+    background-blend-mode: overlay;
+}
+.swiss {
+    background: url(../source/switzerland.jpg) center ;
+    background-blend-mode: overlay;
+}
+.australia {
+    background: url(../source/australia.jpg) center ;
+    background-blend-mode: overlay;
+}
+
+/* Negara (judul) */
+.Country {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.sesi p {
+    color: rgb(255, 255, 255);
+}
+
+/* Memusatkan seluruh konten dalam .Closing */
+.Closing {
+    display: flex;
+    flex-direction: column; /* Elemen diatur secara vertikal */
+    justify-content: space-evenly; /* Memusatkan secara vertikal */
+    align-items: center; /* Memusatkan secara horizontal */
+    min-height: 100vh; /* Div ini mengisi tinggi penuh layar */
+    text-align: center; /* Memusatkan teks */
+    padding: 20px; /* Memberikan ruang di dalam div */
+    border-top: 1px solid white;
+
+}
+
+/* Gaya untuk headline */
+.Closing h1 {
+    font-size:50px;
+    margin-bottom: 20px; /* Jarak bawah untuk elemen berikutnya */
+    color: #ffffff; /* Warna teks */
+}
+
+/* Gaya untuk paragraf */
+.Closing p {
+    font-size: 18px;
+    margin-bottom: 30px; /* Jarak bawah untuk tombol */
+    line-height: 1.6; /* Spasi antar baris */
+    color: #cecece; /* Warna teks */
+}
+
+/* Gaya untuk tombol Call To Action */
+.bot {
+    display: inline-block; /* Agar bisa diatur dimensinya */
+    padding: 12px 24px; /* Ruang dalam tombol */
+    font-size: 18px; /* Ukuran teks tombol */
+    font-weight: bold; /* Teks tebal */
+    color: rgb(255, 255, 255); /* Warna teks */
+    background: #7f8fec;
+    border-radius: 5px; /* Membuat sudut tombol membulat */
+    text-decoration: none; /* Menghilangkan garis bawah teks */
+    transition: background-color 0.3s, color 0.3s; /* Animasi halus untuk hover */
+}
+
+/* Efek hover pada tombol */
+.bot:hover {
+    background: #394068;
+}
+
+.copy
+ {
+    display: flex;
+    justify-content: right;
+    color: white;
+    margin: 30px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+    .logo {
+        margin: 20px;
+    }
+    
+    .menu {
+        margin: 14px;
+    }
+
+    .text-tile {
+        font-size: 25px;
+    }
+    
+    .main-section {
+        flex-direction: column;
+    }
+
+    .right-column {
+        margin-left: 120px;
+    }
+    
+    .other {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

@@ -3,11 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS\style.css.">
-    <title>Project webiste</title>
-    <link rel="icon" type="image/x-icon" href="c:\Users\USER\Downloads\download (13).jpeg">
+    <link rel="stylesheet" href="CSS\project.css">
+    <title>Project webiste.</title>
+    <link rel="icon" type="image/x-icon" href="source/download (13).jpeg">
+    
 </head>
 <body>
+    <header>
+        <!---head-->
+        <section id="home" class="-backimage">
+            <nav>
+                <div class="logo">
+                    <img src="source/download (1).jpg" alt="Logo">
+                    <span class="logo-text">AroundWorld!</span>
+                </div>
+                <div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#our package">Our Package</a></li>
+                            <li><a href="#call us" class="tbl-biru">Call Us</a></li>
+                        </ul>
+                    </div>    
+                </div>
+            </nav>
+
+            <div class="text-tile">
+                <h1>Your Trust Travel Agenku</h1>
+                <br>
+                <p>Your happiness is our happiness.</p>
+                <p>beyond journey's end.</p>
+                <br>
+                <br>
+                <p class="scroll">Scroll down!</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!--image slide-->
+        <section id="contact-us" class="main-section">
+            <!-- Kolom kiri: Gambar, teks, provider, dan fitur -->
+            <div class="left-column">
+                <div class="imageslide">
+                    <button class="prev" onclick="prevSlide()">&#10094</button>
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="source/horace-hsu-386-ilus-swampious-seekers.jpg" alt="imageslide 1">
+                            <p>"Liburan Menjadi Menyenangkan Bersama Travel Agen't Ku"</p>
+                        </div>
+                        <div class="slide">
+                            <img src="source/wl-op-36se.jpg" alt="imageslide 2">
+                            <p>"Lorem ipsum sit doler sit amet"</p>
+                        </div>
+                        <div class="slide">
+                            <img src="source/dao-trong-le-4.jpg" alt="imageslide 3">
+                            <p>"lorem ipsum dlor sit amet"</p>
+                        </div>
+                    </div>    
+                   
+                    <button class="next" onclick="nextSlide()">&#10095</button>
+
+                </div>
+                
+        
+                <div class="provider">
+                    <img src="source/download (13).jpeg" alt="provider">
+                    <div class="txt">
+                        <h1>Florence Hugh</h1>
+                        <p>ibu rumah tangga, 28</p>
+                    </div>
+                </div>
+        
+                <div class="prov">
+                    <div class="item">
+                        <div class="box">1</div>
+                        <p>Your First Feature, Written in a form benefit statement
+                            <br>lorem ispusm sit dolor sit amet insu mdue heruadkjehb
+                        </p>
+                    </div>
+                    <div class="item">
+                        <div class="box">2</div>
+                        <p>Your First Feature, Written in a form benefit statement
+                            <br>lorem ispusm sit dolor sit amet insu mdue heruadkjehb
+                        </p>
+                    </div>
+                    <div class="item">
+                        <div class="box">3</div>
+                        <p>Your First Feature, Written in a form benefit statement
+                            <br>lorem ispusm sit dolor sit amet insu mdue heruadkjehb
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Kolom kanan: Form -->
+            <div class="right-column">
+                <div class="for">
+                    <h2>Contact Us</h2>
+                    <br>
+                    <p>Sales akan menghubungi anda dalam 1 x 24 jam setelah data kami terima</p>
+                </div>
+                <form action="/action_page.php" target="_blank" method="post" class="form-container">
+                    <label for="fname">Your Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+        
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Example@gmail.com" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+        
+                    <label for="service">What are you interested in?</label>
+                    <input list="services" id="service" name="service" placeholder="Select Choice" onkeyup="validateService()">
+                    <datalist id="services">
+                        <option value="Bali">
+                        <option value="Japan">
+                        <option value="Singapore">
+                        <option value="Bandung">
+                        <option value="Surabaya">
+                    </datalist>
+                    <span id="data-error"></span>
+        
+                    <button onclick="return validateForm()" type="submit">Send</button>
+                    <span id="submit-error"></span>
+                </form>
+            </div>
+        </section>
+        
     
+        <!--Our package-->
+        <section id="our package">
+            <div class="midle">
+                <h1>Our Package</h1>
+            </div>
+
+            <div class="other">
+                <div class="sesi china">
+                    <div class="Country">China</div>
+                    <p>Travel wisata di China. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+                <div class="sesi japan">
+                    <div class="Country">Japan</div>
+                    <p>Travel wisata di Japan. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+                <div class="sesi singapore">
+                    <div class="Country">Singapore</div>
+                    <p>Travel wisata di Singapore. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+                <div class="sesi finlandia">
+                    <div class="Country">Finlandia</div>
+                    <p>Travel wisata di Finlandia. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+                <div class="sesi swiss">
+                    <div class="Country">Swiss</div>
+                    <p>Travel wisata di Swiss. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+                <div class="sesi australia">
+                    <div class="Country">Australia</div>
+                    <p>Travel wisata di Australia. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                </div>
+            </div>
+        </section >
+    </main>
+
+    <footer>
+        <section id="call us">
+            <div class="Closing">
+                <h1>Your Closing Argument Headline</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga explicabo amet accusantium,
+                    <br>tenetur dolorem ducimus sit saepe commodi voluptas quod modi, 
+                    architecto nesciunt, provident aut excepturi praesentium impedit? Ab, voluptates?
+                    <br>lorem ispusm sit dolor sit amet insu mdue heruadkjehb
+                </p>
+                <a href="#contact-us" class="bot">Call To Action</a>
+            </div>
+            
+            <div class="copy">
+                <h2>by Rafadib.</h2>
+
+            </div>
+        </section>
+    </footer>    
+
+
+    <script src="JS\Project.js"></script>
+    
+
 </body>
 </html>
