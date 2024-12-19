@@ -167,13 +167,14 @@ button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.288);
     color: white;
     border: none;
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+    border-radius: 25px;
 }
 
 button.prev {
@@ -185,7 +186,7 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.295);
 }
 
 /* Styling untuk provider */
@@ -503,5 +504,18 @@ form button:hover {
     .item {
         font-size: 18px;
     }
+
+    .prev {
+        left: 10px;
+        margin-top: 100px;
+       
+    }
+    
+    .next {
+        right: 10px;
+        margin-top: 100px;
+       
+    }
+    
 }   
 
